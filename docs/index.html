@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    body {
+      background-color: rgb(91, 107, 156);
+    }
+    h2 {
+      font-size: 30px;
+      text-decoration: overline underline;
+    }
+
+    p {
+      font-size: 18px;
+    }
+    ul {
+      font-size: 20px;
+    }
+    li.heading {
+      font-size: 25px;
+      text-decoration: underline;
+    }
+    #list1 {
+      color: rgb(255,105,201);
+    }
+    #list2 {
+      color: rgb(123,255,50);
+    }
+    #list3 {
+      color: rgb(111, 30, 255);
+    }
+    #list4 {
+      color: rgb(25, 255, 40);
+    }
+    #list5 {
+      color: rgb(10,255,55);
+    } 
+    #list6 {
+      color: #ff69c3;
+    } 
+  </style>
+</head>
+
+<body>
+
+  <h2>Convert the following to hex colors</h2>
+  <ol>
+    <li id="list1" class="heading">rgb(255, 105, 201)</li>
+      <ul id="list1" >
+        <li>- 255/16 == 15 R15 -->  ff</li>
+        <li>- 105/16 == 6  R9  -->  69</li>
+        <li>- 201/16 == 12 R9  -->  c9</li>
+        <li>- Answer: #ff69c9</li>
+      </ul>
+
+    <li id="list2" class="heading">rgb(123, 255, 50)</li>
+      <ul id="list2">
+        <li>- 123/16 == 7 R11 -->  7B</li>
+        <li>- 255/16 == 15 R15 --> ff</li>
+        <li>- 50/16 == 3 R2 --> 32</li>
+        <li>- Answer: #7bff32</li>
+      </ul>
+
+   <li id="list3" class="heading">rgb(111, 30, 255)</li>
+    <ul id="list3">
+      <li>- 111/16 == 6 R15 --> 6f</li>
+      <li>- 30/16 == 1 R14 --> 1e</li>
+      <li>- 255/16 == 15 R15 --> ff</li>
+      <li>- Answer: #6f1eff</li>
+    </ul>
+
+    <li id="list4" class="heading">rgb(25, 255, 40)</li>
+    <ul id="list4">
+      <li>- 25/16 == 1 R9 --> 19</li>
+      <li>- 255/16 == 15 R15 --> ff</li>
+      <li>- 40/16 == 2 R8 --> 28</li>
+      <li>- Answer: #19ff28</li>
+    </ul>
+
+    <li id="list5" class="heading">rgb(10, 255, 55)</li>
+    <ul id="list5">
+      <li>- 10/16 == 10 --> 0a</li>
+      <li>- 255/16 == 15 R15 --> ff</li>
+      <li>- 55/16 == 3 R7 --> 37</li>
+      <li>- Answer: #0aff37</li>
+    </ul>
+  </ol>
+
+
+  <h2>Convert the following to rgb colors</h2>
+  <ol>
+    <li id="list6" class="heading">#ff69c3</li>
+    <ul id="list6">
+      <li>- ff == 15 * 16 --> 240 + 15 == 255</li>
+      <li>- 69 == 6 * 16 --> 96 + 9 == 105</li>
+      <li>- c3 == 12 * 16 --> 192 + 3 == 195</li>
+      <li>- Answer: rgb(255, 105, 195)</li>
+    </ul>
+
+    <li id="list2" class="heading">#7bff32</li>
+    <ul id="list2">
+      <li>- 7b == 7 * 16 --> 112 + 11 == 123</li>
+      <li>- ff == 15 * 16 --> 240 + 15 == 255</li>
+      <li>- 32 == 3 * 16 = 48 + 2 == 50</li>
+      <li>- Answer: rgb(123, 255, 50)</li>
+    </ul>
+
+    <li id="list3" class="heading">#6f1eff</li>
+    <ul id="list3">
+      <li>- 6f == 6 * 16 --> 96 + 15 == 111</li>
+      <li>- 1e == 1 * 16 --> 16 + 14 == 30</li>
+      <li>- ff == 15 * 16 --> 240 +15 == 255</li>
+      <li>- Answer: rgb(111, 30, 255)</li>
+    </ul>
+
+    <li id="list4" class="heading">#19ff28</li>
+    <ul id="list4">
+      <li>- 19 == 1 * 16 --> 16 + 9 == 25</li>
+      <li>- ff == 15 * 16 --> 240 + 15 == 255</li>
+      <li>- 28 == 2 * 16 --> 32 + 8 == 40</li>
+      <li>- Answer: rgb(25, 255, 40)</li>
+    </ul>
+
+    <li id="list5" class="heading">#0aff37</li>
+    <ul id="list5">
+      <li>- 0a == 0 * 16 --> 0 + 10 == 10</li>
+      <li>- ff == 15 * 16 --> 240 + 15 == 255</li>
+      <li>- 37 == 3 * 16 --> 48 + 7 == 55</li>
+      <li>- Answer: rgb(10, 255, 55)</li>
+    </ul>
+  </ol>
+
+</body>
+
+</html>
