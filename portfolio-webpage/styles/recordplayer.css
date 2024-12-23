@@ -1,0 +1,222 @@
+/* Record Player Container */
+.record-player-container {
+    position: relative; /* Enable absolute positioning for children */
+    flex: 1 1 25%; /* Proportional sizing */
+    max-width: 800px; /* Restrict maximum size */
+    height: 310px;
+    aspect-ratio: 1; /* Keep it square */
+    background: none; /* Remove background from parent */
+    border-radius: 20px;
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Clip contents to the rounded rectangle */
+}
+
+.record-player-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 0;
+    background: linear-gradient(120deg, #0F0603 30%, #0A0503 70%, #050302 100%); /* Extremely dark walnut base */
+    background-blend-mode: multiply; /* Enhance texture blending */
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.8), /* Deep outer shadow */
+        inset 0 -4px 8px rgba(0, 0, 0, 0.9); /* Inner shading for dimension */
+    overflow: hidden;
+    border: 3px solid #050302; /* Dark border to match base */
+    background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.02) 0%, transparent 50%), /* Subtle highlight */
+        radial-gradient(circle at 85% 85%, rgba(0, 0, 0, 0.2) 0%, transparent 50%), /* Soft natural shadow */
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5px, transparent 5px, transparent 10px); /* Subtle grain */
+}
+
+/* Spinning Record */
+.spinning-record {
+    width: 40%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    transform: translateX(-50%);
+    animation: spin 10s linear infinite;
+}
+
+.spinning-record img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Record Arm */
+.record-arm {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    width: 22%; /* Relative to the container */
+    transform-origin: top left;
+    transform: rotate(-18deg);
+    z-index: 2;
+}
+
+.record-arm img {
+    width: 100%;
+    height: auto;
+}
+
+#slider-container {
+    position: relative;
+    width: 270px; /* Adjust slider width */
+    margin: 20px auto;
+    transform: rotate(90deg);
+    right: -25%;
+}
+
+.slider-label {
+    position: absolute;
+    font-size: 22px;
+    color: #3C2E24;
+    font-weight: bold;
+    top: -20px; /* Adjust position above slider */
+    text-align: left;
+    transform: translateX(-50%);
+    transform: rotate(-90deg);
+}
+
+.slider-label:nth-of-type(1) {
+    left: -13.5%; /* First position (About Me) */
+    top: -170%;
+}
+
+.slider-label:nth-of-type(2) {
+    left: 14%; /* Second position (Resume) */
+    top: -200%;
+}
+
+.slider-label:nth-of-type(3) {
+    left: 55%; /* Third position (Projects) */
+    top: -120%;
+}
+
+.slider-label:nth-of-type(4) {
+    left: 73%; /* Fourth label: Contact */
+    top: -150%;
+    transform: translateY(-100%) rotate(-90deg);
+}
+
+#content-slider {
+    appearance: none;
+    width: 100%;
+    height: 10px; /* Thicker slider for visual impact */
+    background: linear-gradient(to bottom, #4E342E, #6F4E37); /* Richer gradient for depth */
+    border-radius: 10px; /* Smooth edges */
+    outline: none;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3); /* Add inner and outer shadows */
+    position: relative;
+    margin-top: 20px;
+    transition: background 0.3s ease; /* Subtle interactivity */
+}
+
+#content-slider:hover {
+    background: linear-gradient(to bottom, #3C2E24, #8B7355); /* Interactive hover effect */
+}
+
+#content-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px; /* Slightly larger for prominence */
+    height: 24px;
+    background: radial-gradient(circle at center, #D1B89F, #8B7355); /* Metallic shine effect */
+    border: 2px solid #3C2E24;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Elevated thumb */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#content-slider:hover::-webkit-slider-thumb {
+    transform: scale(1.1); /* Subtle enlargement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9); /* Enhanced shadow */
+}
+
+/* Language Buttons Container */
+#language-buttons {
+    position: absolute;
+    bottom: 22px; /* Place at the bottom of the record player */
+    left: 59%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, auto); /* 2 rows */
+    gap: 15px; /* Space between buttons */
+    z-index: 3; /* Ensure they are above other elements */
+}
+.language-btn {
+    background: #3C2E24;
+    color: #D1B89F;
+    border: 2px solid #D1B89F;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    background: #D1B89F;
+    color: #3C2E24;
+    transform: scale(1.1);
+}
+
+/* Controls Container */
+#controls-container {
+    position: absolute;
+    bottom: 220px; /* Place above the language buttons */
+    left: 62.75%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Space between buttons */
+    z-index: 3; /* Ensure above other elements */
+}
+
+.control-btn {
+    background: none; /* Remove background */
+    border: #3C2E24; /* Remove border */
+    color: #3C2E24;
+    font-size: 4rem; /* Adjust symbol size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add interactivity */
+}
+
+.control-btn:hover {
+    color: #8B7355; /* Change color on hover for feedback */
+    transform: scale(1.1); /* Slightly enlarge the symbol on hover */
+}
+
+/* Backup for Extremely Small Screens */
+@media (max-width: 768px) {
+    .main-section {
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    }
+
+    .record-player-container,
+    .full-body,
+    .text-pane {
+        flex: 1 1 30%; /* Reduce size proportionally */
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translateX(-50%) rotate(0deg); /* Start position */
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg); /* Full rotation */
+    }
+}

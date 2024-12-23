@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Bjorn Bradley</title>
+  <link href="../../styles/style.css" rel="stylesheet">
+  <script>
+    // JavaScript to toggle the visibility of the README dropdown
+    function toggleReadme(id) {
+      const readme = document.getElementById(id);
+      readme.classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans leading-relaxed tracking-wide">
+
+  <!-- Navigation Bar -->
+  <!-- Include navigation -->
+<div id="header"></div>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+</script>
+
+  <!-- Projects Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center px-6 mt-16">
+    <h2 class="text-5xl font-bold text-indigo-400 mb-6">My Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Golf Project -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+        <h3 class="text-xl text-indigo-400 font-semibold text-center mb-4">Golf Project</h3>
+        <p class="text-gray-300 text-center">Explore my Golf tracking project...</p>
+        <a href="projects/golfwebsite/src/index.html" target="_blank" 
+           class="block mt-4 text-center text-indigo-500 hover:text-indigo-400">
+          Open Project
+        </a>
+        <button onclick="toggleReadme('golf-readme')" 
+                class="block mt-2 text-center text-indigo-500 hover:text-indigo-400">
+          Read More
+        </button>
+        <a href="projects/golfwebsite/golfwebsite.zip" download
+           class="block mt-2 text-center text-indigo-500 hover:text-indigo-400">
+          Download Project
+        </a>
+        <!-- README Dropdown -->
+        <div id="golf-readme" class="hidden mt-4 bg-gray-700 p-4 rounded">
+          <p class="text-gray-300 text-sm">
+            <!-- Inline README Content -->
+            Welcome to the Golf Tracking Project! This tool allows you to track golf scores and visualize player statistics. Key features include:
+            <ul class="list-disc pl-6 mt-2">
+              <li>Dynamic score tracking</li>
+              <li>Player stats visualization</li>
+              <li>User-friendly interface</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Music Projection Project -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+        <h3 class="text-xl text-indigo-400 font-semibold text-center mb-4">Music Projection</h3>
+        <p class="text-gray-300 text-center">Check out my music projection project...</p>
+        <a href="projects/musicprojection/control/vinyls.html" target="_blank" 
+           class="block mt-4 text-center text-indigo-500 hover:text-indigo-400">
+          Open Project
+        </a>
+        <button onclick="toggleReadme('music-readme')" 
+                class="block mt-2 text-center text-indigo-500 hover:text-indigo-400">
+          Read More
+        </button>
+        <a href="projects/musicprojection/musicprojection.zip" download
+           class="block mt-2 text-center text-indigo-500 hover:text-indigo-400">
+          Download Project
+        </a>
+        <!-- README Dropdown -->
+        <div id="music-readme" class="hidden mt-4 bg-gray-700 p-4 rounded">
+          <p class="text-gray-300 text-sm">
+            <!-- Inline README Content -->
+            The Music Projection Project visualizes music in real-time, mapping effects to vinyl records. This project includes:
+            <ul class="list-disc pl-6 mt-2">
+              <li>Reactive animations for music beats</li>
+              <li>Customizable vinyl projections</li>
+              <li>Remote control via a Raspberry Pi</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

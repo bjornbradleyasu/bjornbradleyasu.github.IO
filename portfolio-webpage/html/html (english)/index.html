@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bjorn Bradley | Music Software Developer</title>
+  <link href="../../styles/style.css" rel="stylesheet">
+  <link href="../../styles/recordplayer.css" rel="stylesheet">
+  <link href="../../styles/style.css" rel="stylesheet">
+  <script src="../../js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Include navigation -->
+<div id="header"></div>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+</script>
+
+  <!-- Main Section -->
+  <div class="main-section">
+    <div class="name-display">Bjorn Bradley</div>
+    <div class="record-player-container">
+        <!-- Rectangle Element -->
+        <div class="record-player-rectangle"></div>
+
+        <!-- Spinning Record -->
+        <div class="spinning-record">
+            <img src="../../assets/images/record.png" alt="Vinyl Record">
+        </div>
+
+        <!-- Record Arm -->
+        <div class="record-arm">
+            <img src="../../assets/images/record-arm.png" alt="Record Arm">
+        </div>
+
+        <!-- Vertical Slider -->
+        <div id="slider-container">
+          <input type="range" id="content-slider" min="0" max="3" step="1" value="0">
+          <label for="content-slider" class="slider-label">About Me</label>
+          <label for="content-slider" class="slider-label">Experience</label>
+          <label for="content-slider" class="slider-label">Skills</label>
+          <label for="content-slider" class="slider-label">Coursework</label>
+      </div>
+
+      <div id="controls-container">
+        <button id="play-button" class="control-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+        </button>
+        <button id="stop-button" class="control-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+        </button>
+    </div>
+
+        <div id="language-buttons">
+            <button class="language-btn">ENG</button>
+            <button class="language-btn">ESP</button>
+            <button class="language-btn">DEU</button>
+            <button class="language-btn">FRA</button>
+            <button class="language-btn">ZHO</button>
+            <button class="language-btn">JAP</button>
+            <button class="language-btn">HIN</button>
+            <button class="language-btn">URD</button>
+        </div>
+    </div>
+
+    <!-- Full-Body Image -->
+    <div class="full-body">
+      <img src="../../assets/images/fullbody.png" alt="Full Body">
+    </div>
+
+    <!-- About Section -->
+    <div id="text-container" class="text-pane">
+        <!-- Default Text -->
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm Bjorn Bradley, a passionate web developer and aspiring music producer.
+            This portfolio showcases my journey, skills, and projects as I pursue my dreams.
+        </p>
+        <p>
+            Explore my work and learn more about my experiences in design, coding, and music production.
+        </p>
+    </div>
+  </div>
+
+</body>
+</html>

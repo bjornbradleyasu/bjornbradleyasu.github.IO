@@ -1,0 +1,263 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    background: none;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #45a049;
+    border-color: white;
+}
+
+.nav-button.active {
+    background: white;
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.vinyls-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Grid Pane */
+.grid-pane {
+    width: 100%; /* Make the grid pane span the full width */
+    max-width: none; /* Remove any max-width restriction */
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-pane h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Keep the grid layout */
+    gap: 1rem;
+    margin: 0 auto; /* Center the grid */
+    max-width: 1200px; /* Optional: Constrain grid width for readability */
+}
+
+.grid-item {
+    width: 12vh; /* Set the width to 12vh */
+    height: 12vh; /* Set the height to 12vh to ensure the item is square */
+    padding: 0; /* Remove any extra padding */
+    background: #e0e0e0; /* Light gray background similar to projector display */
+    border-radius: 8px; /* Rounded corners for consistency */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: flex; /* Center image within the grid item */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    overflow: hidden; /* Prevent image overflow */
+}
+
+/* Images in Companion App Grid Items */
+.grid-item img {
+    width: 100%; /* Stretch image to fill the grid item width */
+    height: 100%; /* Stretch image to fill the grid item height */
+    object-fit: cover; /* Maintain the aspect ratio of the image */
+    border-radius: 4px; /* Matches grid item border radius */
+    display: block; /* Ensure proper spacing */
+}
+
+
+/* Panes Container */
+.panes-container {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Library Pane */
+.library-pane {
+    flex: 1;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.library-pane h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+#library-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.library-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.library-item img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* Search Pane */
+.search-pane {
+    flex: 1;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-pane h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.recommendations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: calc(100% - 20px); /* Matches the width of the search bar */
+}
+
+.recommendation-item:hover {
+    background: #f0f0f0;
+}
+
+/* Results List */
+.results-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.results-item {
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-item div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.results-item img {
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* Dropzone Styling */
+.dropzone {
+    position: relative; /* Ensures child elements (like images) are positioned correctly */
+    width: 120px; /* Set a fixed width for each grid slot */
+    height: 120px; /* Set a fixed height for each grid slot */
+    border: 2px dashed #ccc; /* Dashed border for empty slots */
+    border-radius: 4px; /* Optional: Rounded corners */
+    background-color: #f9f9f9; /* Light background for empty slots */
+    overflow: hidden; /* Prevents images from spilling outside the grid slot */
+    display: flex; /* Centers content inside the slot */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Highlight Dropzone on Drag Over */
+.dropzone.drag-over {
+    border-color: #4CAF50; /* Green border when dragging over */
+    background-color: rgba(76, 175, 80, 0.1); /* Subtle green highlight */
+}
+
+/* Image Styling for Grid Items */
+.dropzone img {
+    position: absolute; /* Ensures the image fills the grid slot */
+    top: 0; /* Align to the top of the grid slot */
+    left: 0; /* Align to the left of the grid slot */
+    width: 100%; /* Image stretches to fill the grid slot width */
+    height: 100%; /* Image stretches to fill the grid slot height */
+    object-fit: cover; /* Maintains the image's aspect ratio while filling the slot */
+    border-radius: 4px; /* Matches the dropzone's rounded corners */
+    display: block; /* Removes any inline block spacing issues */
+}

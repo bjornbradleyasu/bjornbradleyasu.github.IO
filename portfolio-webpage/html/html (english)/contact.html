@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Bjorn Bradley</title>
+  <link href="../../styles/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Include navigation -->
+<div id="header"></div>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+</script>
+
+  <!-- Contact Section -->
+  <section>
+    <h2>Contact Me</h2>
+    <p>I’d love to connect! Reach out using any of the options below.</p>
+  
+    <!-- Contact Cards Grid -->
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="../../assets/images/gmail-icon.png" alt="Email">
+        <h3>Personal Email</h3>
+        <p>bjornbradley04@gmail.com</p>
+        <a href="mailto:bvbradle@asu.edu">Send Email</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/call-icon.png" alt="Phone">
+        <h3>Phone</h3>
+        <p>+1 (608) 370-9837</p>
+        <a href="tel:+16083709837">Call Me</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/gmail-icon.png" alt="School Email">
+        <h3>School Email</h3>
+        <p>bvbradle@asu.edu</p>
+        <a href="mailto:bvbradle@asu.edu">Send Email</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/github-icon.png" alt="GitHub">
+        <h3>GitHub</h3>
+        <a href="https://github.com/bjornbradleyasu" target="_blank">Visit GitHub</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/linkedin-icon.png" alt="LinkedIn">
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com" target="_blank">Visit LinkedIn</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/Instagram_icon.png" alt="Instagram">
+        <h3>Instagram</h3>
+        <a href="https://instagram.com" target="_blank">Visit Instagram</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/discord-icon.png" alt="Discord">
+        <h3>Discord</h3>
+        <p>Username#1234</p>
+        <a href="https://discordapp.com/users/your-discord-id" target="_blank">Join Me on Discord</a>
+      </div>
+      <div class="contact-card">
+        <img src="../../assets/images/tidal-icon.png" alt="Tidal">
+        <h3>Tidal</h3>
+        <a href="https://tidal.com/your-profile-url" target="_blank">Listen on Tidal</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

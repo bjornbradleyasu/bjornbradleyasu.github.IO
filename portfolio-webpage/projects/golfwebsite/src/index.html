@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/your_scorecards.js"></script> 
+</head>
+<body>
+
+    <div id="sidebar" class="sidebar">
+      <button class="close-btn" id="closeSidebar">&times;</button>
+      <nav>
+          <ul>
+              <li><a href="#" data-page-id="mainPage">Main Page</a></li>
+              <li><a href="#" data-page-id="page1">Game Page</a></li>
+              <li><a href="#" data-page-id="scorecardsPage">Your Scorecards</a></li>
+              <li><a href="#" data-page-id="youtubePage">YouTube Videos</a></li> 
+              <li><a href="#" data-page-id="linksPage">Links</a></li>
+          </ul>
+      </nav>
+  </div>
+
+ 
+    <button id="openSidebar" class="open-sidebar-btn">☰</button>
+
+    <div id="mainPage" class="page active">
+      <h1>Welcome to Bogey Golf</h1>
+      <p>Use the sidebar to navigate to the game page and start playing!</p>
+      <div id="description" class="page">
+          <p>This app was designed for the lighthearted golf fans that don’t take the game too seriously and just want to have some fun.</p>
+      </div>
+
+      <div id="image-container">
+          <img src="golf-icon.png" alt="Logo" id="logo-image">
+      </div>
+  </div>
+
+    <div id="page1" class="page" style="display: none;">
+        <h1>Game Page</h1>
+        <p>Start your golf game by searching for a course below:</p>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for a golf course..." />
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+        <div class="dropdown-container">
+            <label for="gameMode">Select Game Mode:</label>
+            <select id="gameMode">
+                <option value="classic">Classic</option>
+                <option value="tee-flip">Tee Flip</option>
+                <option value="alternate-shot">Alternate Shot</option>
+                <option value="scramble">Scramble</option>
+                <option value="best-ball">Best Ball</option>
+            </select>
+        </div>
+        <div class="table-container">
+            <h3>Game Score Table</h3>
+            <div class="table-container">
+                <h3>Front Nine</h3>
+                <table id="gameTable">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="table-container">
+                <h3>Back Nine</h3>
+                <table id="backNineTable">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+                <button id="saveScorecardButton">Save Scorecard</button>
+            </div>
+        </div>
+    </div>
+
+
+<div id="scorecardsPage" class="page" style="display: none;">
+  <h1>Your Scorecards</h1>
+  <section id="scorecard-section">
+      <h2>Saved Scorecards</h2>
+      <table id="scorecardsTable">
+          <thead>
+              <tr>
+                  <th>Date</th>
+                  <th>Course</th>
+                  <th>Game Mode</th>
+                  <th>Scores</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              
+          </tbody>
+      </table>
+  </section>
+
+  <section id="add-scorecard" style="display: none;">
+   
+      <h2>Add New Scorecard</h2>
+      <form id="scorecardForm">
+          <label for="date">Date:</label>
+          <input type="date" id="date" required>
+          <label for="course">Course:</label>
+          <input type="text" id="course" placeholder="Course Name" required>
+          <label for="score">Score:</label>
+          <input type="number" id="score" placeholder="Score" required>
+          <button type="submit">Add Scorecard</button>
+      </form>
+  </section>
+</div>
+
+<div id="youtubePage" class="page" style="display: none;">
+  <h1>Suggested Golf Videos</h1>
+  <div id="videoList">
+     
+  </div>
+</div>
+<div id="linksPage" class="page" style="display: none;">
+  <h1>Useful Links</h1>
+  <p>Explore the following links:</p>
+  <ul>
+      <li>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/bjornbradleyasu" target="_blank">https://github.com/bjornbradleyasu</a>
+      </li>
+      <li>
+          <strong>Email:</strong>
+          <a href="mailto:bjornbradley04@gmail.com">bjornbradley04@gmail.com</a>
+      </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    background: linear-gradient(to bottom right, #8B7355, #D1B89F); /* Brown to beige gradient */
+    color: #3C2E24;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background: #6F4E37;
+    color: #D1B89F;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem; /* Space between navigation links */
+    margin-left: auto; /* Push items to the right initially */
+    margin-right: 3rem; /* Adjust this value to slide the options left */
+}
+
+nav ul li {
+    margin: 0; /* Ensure consistent spacing */
+}
+
+nav ul li a {
+    color: #D1B89F; /* Match the navigation bar color scheme */
+    text-decoration: none; /* Remove underlines */
+    font-weight: bold; /* Make the text bolder */
+    font-size: 1.25rem; /* Adjust this value to change the font size */
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 5px; /* Slight rounding for hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+nav ul li a:hover {
+    background-color: #D1B89F; /* Change background color on hover */
+    color: #6F4E37; /* Complementary text color on hover */
+}
+
+/* Main Section for Horizontal Layout */
+.main-section {
+    display: flex; /* Enable horizontal layout */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Center items vertically */
+    gap: 1rem; /* Add space between items */
+    padding: 2rem;
+    padding-bottom: 0rem;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    overflow-x: hidden; /* Prevent horizontal scrolling in most cases */
+}
+
+/* Name Display */
+.name-display {
+    position: absolute; /* Position relative to the document */
+    top: calc(12rem - 4rem); /* Align above the record player (adjust this as needed) */
+    left: 23%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    text-align: center; /* Center the name text */
+    font-size: 6rem; /* Adjust font size */
+    color: #D1B89F; /* Match color palette */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+    z-index: 2; /* Ensure it appears above the rectangle */
+    background: rgba(35, 25, 10, 0.7); /* Optional: Background for readability */
+    padding: 0.5rem 1rem; /* Add padding for the background */
+    border-radius: 8px; /* Optional: Rounded corners */
+    letter-spacing: 0.025em;
+}
+
+.full-body {
+    flex: 1 1 20%; /* Proportional sizing */
+    max-width: 250px; /* Restrict maximum size */
+    text-align: center;
+    display: flex; /* Align the image using flexbox */
+    justify-content: flex-end; /* Align the image to the right */
+    position: relative; /* Allow positioning adjustments */
+    margin-right: -1rem; /* Negative margin to overlap the text-pane */
+    margin-top: 2rem;
+    z-index: 0; /* Ensure it appears above other elements */
+}
+
+.full-body img {
+    width: 100%; /* Scale the image within its container */
+    border-radius: 10px;
+    object-fit: contain; /* Ensure the image respects aspect ratio */
+}
+
+/* About Section */
+.text-pane {
+    flex: 1 1 40%; /* Proportional sizing */
+    max-width: 550px;
+    background: #6F4E37;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #D1B89F;
+    height: 590px;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1; /* Ensure it appears beneath the image */
+}
+
+#text-container {
+    text-align: center;
+    font-size: 16px;
+    color: #3C2E24;
+    background: #D1B89F;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Contact Page Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: #6F4E37; /* Card background */
+    color: #D1B89F; /* Font color */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.contact-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #D1B89F;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #8B7355; /* Hover effect */
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Backup for Extremely Small Screens */
+@media (max-width: 768px) {
+    .main-section {
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    }
+
+    .record-player-container,
+    .full-body,
+    .text-pane {
+        flex: 1 1 30%; /* Reduce size proportionally */
+    }
+}
