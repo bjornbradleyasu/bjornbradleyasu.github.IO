@@ -1,0 +1,51 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: black; /* Black background for the projector */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for the grid */
+#container {
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Grid layout */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(7, 12vw); /* 7 columns, size based on viewport width */
+    grid-template-rows: repeat(3, 12vw); /* 3 rows, size based on viewport width */
+    gap: 1.5vw; /* Gaps between grid cells */
+}
+
+/* Individual grid cells */
+.grid-cell {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #1e1e1e; /* Dark background for cells */
+    color: white; /* Text color */
+    border: 1px solid #444; /* Subtle border for cells */
+    width: 12vw; /* Explicitly set width */
+    height: 12vw; /* Explicitly set height */
+    text-align: center; /* Center text */
+    font-size: 1vw; /* Scalable text size */
+    box-sizing: border-box; /* Include padding/border in size */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Highlight for debugging purposes */
+.grid-cell:hover {
+    background-color: #333; /* Highlight cell on hover */
+}
